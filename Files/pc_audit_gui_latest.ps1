@@ -6,11 +6,10 @@
 		The GUI Form takes user input to desginate the correct Endpoint site and Wave 3 
 		cutover disposition if already determined among other predetermined data points.
 		This data is then appended to a newly generated .htm file and and CSV file or 
-		appended to an existing CSV file located on a USB drive in the Jabil Auditor's 
+		appended to an existing CSV file located on a USB drive in the IT Auditor's 
 		posession.	
 	.EXAMPLE
-		- pc_audit_gui_vX.X.ps1 
-		- http://bit.ly/jabilaudit
+
     .OUTPUTS
 		Files:
 		1. <SITE>_<DATE>_Audit_Report.csv (New Report is generated if either different
@@ -152,8 +151,6 @@ function Green () {
 }
 function Red () {
 	Write-Host Convey Selected, Starting Audit.
-	#Copy-Item "$PSScriptRoot\poshgui.bat" "C:\JABIL_AUDIT\Domain_Join.bat" -Force
-	#Write-Host Domain Join Script Copied to C:\JABIL_AUDIT
 	$Site = $Sites.SelectedItem.ToString()
     $dispo = $RedBtn.text
 	confirm
@@ -209,7 +206,7 @@ if(!document.getElementById)
 </head>
 <body>
 <b><font face="Arial" size="5">$($Header)</font></b><hr size="8" color="#CC0000">
-<font face="Arial" size="1"><b>Version $Version Created by Jorge Suarez  jorge_suarez1@jabil.com</b></font><br>
+<font face="Arial" size="1"><b>Version $Version Created by Jorge Suarez  jorge@jorgesuarez.us</b></font><br>
 <font face="Arial" size="1">Report created on $(Get-Date)</font>
 <div class="filler"></div>
 <div class="filler"></div>
@@ -599,7 +596,7 @@ Write-Output "Collating Detail for $Target"
 # Init Form
 $Form                             = New-Object system.Windows.Forms.Form
 $Form.ClientSize                  = '400,700'
-$Form.text                        = "JABIL AUDIT TOOL $version"
+$Form.text                        = "IT AUDIT TOOL $version"
 #$Form.BackColor                   = "#b5adad"
 $Form.BackColor                   = "#ffffff"
 $Form.TopMost                     = $false
