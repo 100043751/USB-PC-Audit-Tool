@@ -1,0 +1,27 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20200227210049
+Username: PROMETHEUS\Jorge-User
+RunAs User: PROMETHEUS\Jorge-User
+Configuration Name: 
+Machine: PROMETHEUS (Microsoft Windows NT 10.0.19041.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -Windowstyle Hidden -file .\Files\src\pc_audit_gui_latest.ps1
+Process ID: 20600
+PSVersion: 5.1.19041.1
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.1
+BuildVersion: 10.0.19041.1
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\Jorge Suarez\OneDrive - Jabil\Project Dayton\USB-PC-Audit-Tool\Files\src\Logs\PROMETHEUS_20200227210049.txt
+
+
+PS>$global:?
+True
+**********************
+Windows PowerShell transcript end
+End time: 20200227210057
+**********************

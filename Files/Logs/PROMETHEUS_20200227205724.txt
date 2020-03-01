@@ -1,0 +1,38 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20200227205724
+Username: PROMETHEUS\Jorge-User
+RunAs User: PROMETHEUS\Jorge-User
+Configuration Name: 
+Machine: PROMETHEUS (Microsoft Windows NT 10.0.19041.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -Windowstyle Hidden -file .\Files\pc_audit_gui_latest.ps1
+Process ID: 20624
+PSVersion: 5.1.19041.1
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.1
+BuildVersion: 10.0.19041.1
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\Jorge Suarez\OneDrive - Jabil\Project Dayton\USB-PC-Audit-Tool\Files\Logs\PROMETHEUS_20200227205724.txt
+Exception calling "FromFile" with "1" argument(s): "C:\Users\Jorge Suarez\OneDrive - Jabil\Project 
+Dayton\USB-PC-Audit-Tool\Files\265_main.jpg"
+At C:\Users\Jorge Suarez\OneDrive - Jabil\Project Dayton\USB-PC-Audit-Tool\Files\pc_audit_gui_latest.ps1:659 char:1
++ $Image                               = [system.drawing.image]::FromFi ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : FileNotFoundException
+Exception calling "FromFile" with "1" argument(s): "C:\Users\Jorge Suarez\OneDrive - Jabil\Project
+Dayton\USB-PC-Audit-Tool\Files\265_main.jpg"
+At C:\Users\Jorge Suarez\OneDrive - Jabil\Project Dayton\USB-PC-Audit-Tool\Files\pc_audit_gui_latest.ps1:659 char:1
++ $Image                               = [system.drawing.image]::FromFi ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : FileNotFoundException
+
+
+
+PS>$global:?
+True

@@ -6,7 +6,7 @@
 		The GUI Form takes user input to desginate the correct Endpoint site and Wave 3 
 		cutover disposition if already determined among other predetermined data points.
 		This data is then appended to a newly generated .htm file and and CSV file or 
-		appended to an existing CSV file located on a USB drive in the Jabil Auditor's 
+		appended to an existing CSV file located on a USB drive in the Auditor's 
 		posession.	
 	.EXAMPLE
 		- pc_audit_gui_vX.X.ps1 
@@ -73,7 +73,7 @@
 		   10JUL19  4.4     JS      - Added 'PC No.' Field.
 		   10JUL19  4.5		JS		- Moved 'Peripherals field in CSV next to 'Model'; Added
 									 'Specialty Apps',ICE PC' and 'Eval PC Dispo'.
-		   12DEC19  4.6.1     JS  	- Edit Sites to be used for Wave 4 (Tuttlingen, and Umkirch)
+		   12DEC19  4.6.1     JS  	- Edit Sites to be used for Wave 4 (Hawthorne, and Houston)
 		   17DEC19  4.6.2     JS  	- Changing "EVAL PC Dispo" to "Legal Hold"
 
 #>
@@ -599,7 +599,7 @@ Write-Output "Collating Detail for $Target"
 # Init Form
 $Form                             = New-Object system.Windows.Forms.Form
 $Form.ClientSize                  = '400,700'
-$Form.text                        = "JABIL AUDIT TOOL $version"
+$Form.text                        = "Jorge's AUDIT TOOL $version"
 #$Form.BackColor                   = "#b5adad"
 $Form.BackColor                   = "#ffffff"
 $Form.TopMost                     = $false
@@ -656,7 +656,7 @@ $WhiteBtn.height                  = 58
 $WhiteBtn.location                = New-Object System.Drawing.Point(104,640)
 $WhiteBtn.Font                    = 'Microsoft Sans Serif,10,style=Bold'
 
-$Image 							  = [system.drawing.image]::FromFile("$PSScriptroot\265_main.jpg")
+$Image 							  = [system.drawing.image]::FromFile("$PSScriptroot\265_main.png")
 $pictureBox 					  = new-object Windows.Forms.PictureBox 
 $pictureBox.width				  = 327
 $pictureBox.height   			  = 180
@@ -683,7 +683,7 @@ $Label2.Font                      = 'Microsoft Sans Serif,10'
 
 
 
-$descriptions = @('Select Site','Tuttlingen','Umkirch')
+$descriptions = @('Select Site','Hawthorne','Houston','Cape Canaveral')
 
 
 
@@ -692,7 +692,7 @@ $Sites_SelectedIndexChanged=
         Switch ($Sites.text)
        {
             
-            'Tuttlingen'
+            'Hawthorne'
             {
 				$envnames = @('Select Zone',
 				'Zone 1',
@@ -709,7 +709,24 @@ $Sites_SelectedIndexChanged=
                 'Zone 12'
                 )
             }
-            'Umkirch'
+            'Houston'
+            {
+				$envnames = @('Select Zone',
+				'Zone 1',
+                'Zone 2',
+                'Zone 3',
+                'Zone 4',
+                'Zone 5',
+                'Zone 6',
+                'Zone 7',
+                'Zone 8',
+                'Zone 9',
+                'Zone 10',
+                'Zone 11',
+                'Zone 12'
+                )
+			}
+			'Cape Canaveral'
             {
 				$envnames = @('Select Zone',
 				'Zone 1',
@@ -736,7 +753,7 @@ $Zone.add_SelectedIndexChanged($Zone_SelectedIndexChanged)
 
 
 $Sites                            = New-Object system.Windows.Forms.ComboBox
-@('Tuttlingen','Umkirch') | ForEach-Object {[void] $Sites.Items.Add($_)}
+@('Hawthorne','Houston','Cape Canaveral') | ForEach-Object {[void] $Sites.Items.Add($_)}
 $Sites.width                      = 200+33
 $Sites.height                     = 123
 $Sites.location                   = New-Object System.Drawing.Point(123,237)
